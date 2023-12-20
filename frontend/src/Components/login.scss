@@ -1,0 +1,241 @@
+  @import "../App.css";
+
+// signup styling
+
+$myCustomInputStyles:(
+  flex-direction: column,
+  display: flex,
+  gap:0.7rem,
+  margin-bottom: 0.6rem,
+);
+
+@mixin applyCustomInputStyles {
+  @each $property, $value in $myCustomInputStyles {
+    #{$property}: $value;
+  }
+}
+
+$myCustomTextStyles: (
+  font-family: 'poppins',
+  font-size: 1em,
+  font-weight: 600,
+//   line-height: 44px,
+  letter-spacing: 0,
+  text-align: left,
+);
+
+
+
+@mixin applyCustomTextStyles {
+  @each $property, $value in $myCustomTextStyles {
+    #{$property}: $value;
+  }
+}
+.flip-signup-card{
+  transform: rotateY(180deg); 
+}
+
+.signup-parent{
+  width:32% !important;
+   right:5% !important;
+   top:5% !important;
+   position: relative;
+   perspective: 1000px;
+
+   @media (max-width: 1200px) { /* Adjust the max-width value as needed */
+    width: 60vw !important;
+    left: 50% !important;
+    right: unset !important;
+    transform: translate(-50%,0);
+  }
+
+   @media (max-width: 768px) { /* Adjust the max-width value as needed */
+    width: 90vw !important;
+  }
+
+   .flip-signup{
+    transform-style: preserve-3d;
+   transition: transform 0.5s;
+   }
+
+   .heading{
+        display: flex!important;
+        justify-content: center!important;
+        font-size: 1.4em;
+   }
+  .row-1{
+    border-bottom: none !important;
+  }
+  .signup-row{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap:20px;
+    
+     >.signup-field{
+
+      @include applyCustomInputStyles;
+      >label{
+        @include applyCustomTextStyles;
+        
+     } 
+     > label::after {
+      content: '*';
+      color: red;
+      font-size: 1em;
+      font-weight: 600;
+    }
+     >input{
+      padding: 1rem;
+      border: 1px solid #000000;
+      border-radius:4px;
+
+    }
+    #dob{
+      width: 85%;
+      padding: 1rem;
+      border: 1px solid #000000;
+      border-radius:4px;
+      cursor: pointer;
+    }
+    >#gender{
+      border: 1px solid #000000;
+      border-radius:4px;
+      padding: 1rem 0.4rem 1rem 0;
+
+    }
+   
+    >.custom-upload-pic {
+      cursor: pointer;
+      // display: flex;
+      justify-content: center;
+      background: #b5f3ee;
+      border-radius: 5px;
+      text-align: center;
+      width: 85%;
+      // margin-right: 10px;
+      color: black;
+      padding: 0.9rem;
+      font-weight:500;
+      margin:0;
+    }
+    }
+   
+  }
+
+
+  // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+//  login styling
+
+
+
+
+
+  
+}
+.form-parent{
+    min-width: 22%;
+    min-height:50vh;
+    display:flex;
+    background:white;
+    padding:1rem 1rem 1.5rem 1.5rem ;
+    border-radius:10px;
+    border: none;
+    position: absolute;
+    right:10%;
+    top:5rem;
+    display: flex;
+    flex-direction: column;
+    perspective: 1000px;
+
+    // flip-card animation
+      
+    perspective: 1000px;
+    transition: transform 0.5s; /* Add a smooth transition effect */
+    transform-style: preserve-3d; 
+
+    .heading{
+        >p{
+            @include applyCustomTextStyles;
+            font-size:1.4em;
+   
+         }
+        
+      }
+      >.row-1{
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #000000;
+      }
+     
+
+    
+    
+    >.row{
+        >.input-field {
+            @include applyCustomInputStyles;
+            
+            >.Google-btn{
+                padding:1rem !important;
+                // width: 10vw !important;
+            }
+            >label{
+                @include applyCustomTextStyles;
+             }
+           
+             >input{
+               padding: 1rem;
+               border: 1px solid #000000;
+               border-radius:4px;
+   
+             }
+          }
+         
+      }
+      
+      .login-btn{
+        background: #04736f;
+        padding:1rem;
+        text-align: center !important;
+        border:none;
+        border-radius:10px;
+        margin-top:1rem;
+        color:white;
+        cursor:pointer;
+        @include applyCustomTextStyles;
+      }
+      .login-btn:hover{
+        background-color: #07cac7;
+      }
+    .signup{
+        margin-top:0.5rem;
+        text-align: center;
+        border-top: 1px solid #000000;
+        display:flex;
+        flex-direction:row ;
+        justify-content: center;
+        .signup-btn{
+          margin-top:4px;
+            background:transparent;
+            border:none;
+            cursor: pointer;
+            text-decoration: underline;
+            color:black;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+    }  
+    
+
+
+    @media (max-width: 1200px) { /* Adjust the max-width value as needed */
+      min-width: 40%;
+      left: 50%;
+      right: unset;
+      transform: translate(-50%,0);
+    }
+  
+     @media (max-width: 768px) { /* Adjust the max-width value as needed */
+      min-width: 50%;
+    }
+}
