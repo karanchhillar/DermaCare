@@ -21,8 +21,6 @@ DearmaCare is a web-based platform designed to analyze skin conditions based on 
 
 ## Contributing
 We welcome contributions! If you'd like to contribute to DearmaCare, please follow my GitHub account
-## License
-This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 - Special thanks to [goyalh4164, TruecoderSri, VaibhavArora314, bpnt, Ultimateutkarsh11](CONTRIBUTORS.md) who have dedicated their time and expertise to improve DearmaCare.
