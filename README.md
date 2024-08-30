@@ -3,6 +3,8 @@
 ## Project Overview
 DearmaCare is a web-based platform designed to analyze skin conditions based on user-uploaded photos. The project aims to provide a user-friendly tool for early detection and intervention, enhancing overall skin health awareness.
 
+Check this video for demo = https://github.com/goyalh4164/Dermacare/assets/84830429/a9d8a997-6e6c-4b94-bb3d-e21299a13a41
+
 ## Features
 - **Skin Disease Prediction:** Utilizes a machine learning model with a 90% accuracy rate to predict skin diseases.
 - **Personalized Reports:** Generates personalized reports for users based on the analysis of uploaded skin photos.
